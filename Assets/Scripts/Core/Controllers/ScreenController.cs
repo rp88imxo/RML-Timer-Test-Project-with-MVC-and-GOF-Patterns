@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -59,10 +60,10 @@ public class ScreenController
                 screenQueueCapacity);
     }
 
-    private void OnScreenChangedSelf(ScreenType newScreenType)
+    private async UniTask OnScreenChangedSelf(ScreenType newScreenType)
     {
         CurrentScreenType = newScreenType;
-        CheckRequestedScreens();
+        await CheckRequestedScreens();
     }
 
     public bool HasAnyRequestedScreensAfterScreen(ScreenType screenType)
@@ -99,31 +100,29 @@ public class ScreenController
         Screens.Remove(screen.ScreenType);
     }
 
-    public void Reset()
-    {
-        _screensStack.Clear();
-    }
+    public void Reset() { _screensStack.Clear(); }
 
-    public void BackToPreviousScreen()
+    public async UniTask BackToPreviousScreen()
     {
         if (_screensStack.Count <= 1)
         {
-            Debug.LogWarning("This screen is a root, return to main screen!");
-            SwitchToScreen(ScreenType.MainScreen);
+            Debug.LogWarning(
+                "This screen is a root, return to main screen!");
+            await SwitchToScreen(ScreenType.MainScreen);
             return;
         }
 
         var currentSwitchScreenData = _screensStack.Pop();
         var currentScreenToHide = currentSwitchScreenData.Screen;
 
-        currentScreenToHide.OnHide();
+        await currentScreenToHide.OnHide();
 
         var previousScreenData = _screensStack.Peek();
         var previousScreen = previousScreenData.Screen;
         switch (currentSwitchScreenData.SwitchMode)
         {
         case SwitchMode.Replacing:
-            previousScreen.OnShow<BaseScreenData>(null);
+            await previousScreen.OnShow<BaseScreenData>(null);
             break;
         case SwitchMode.Additive: break;
         default: throw new ArgumentOutOfRangeException();
@@ -133,20 +132,20 @@ public class ScreenController
 
         Debug.Log(
             $"Screen switched from {currentScreenToHide.ScreenType} to {previousScreen.ScreenType}");
-        OnScreenChangedSelf(previousScreen.ScreenType);
+        await OnScreenChangedSelf(previousScreen.ScreenType);
     }
 
-    public void SwitchToScreen(ScreenType screenTypeToSwitch,
+    public async UniTask SwitchToScreen(ScreenType screenTypeToSwitch,
         SwitchMode switchMode = SwitchMode.Replacing,
         bool resetScreenStack = false)
     {
-        SwitchToScreenWithScreenData(
+        await SwitchToScreenWithScreenData(
             new EmptyScreenData(screenTypeToSwitch),
             switchMode,
             resetScreenStack);
     }
 
-    public void SwitchToScreenWithScreenData<T>(T baseScreenData,
+    public async UniTask SwitchToScreenWithScreenData<T>(T baseScreenData,
         SwitchMode switchMode = SwitchMode.Replacing,
         bool resetScreenStack = false)
         where T : BaseScreenData
@@ -176,7 +175,7 @@ public class ScreenController
             switch (switchMode)
             {
             case SwitchMode.Replacing:
-                currentScreen.OnHide();
+                await currentScreen.OnHide();
                 break;
             case SwitchMode.Additive: break;
             default: throw new ArgumentOutOfRangeException();
@@ -191,31 +190,32 @@ public class ScreenController
 
         _screensStack.Push(newSwitchScreenData);
 
-        newScreen.OnShow(baseScreenData);
+        await newScreen.OnShow(baseScreenData);
 
         ScreenChanged?.Invoke(newScreen.ScreenType);
         string switchedFrom =
             currentScreen?.ScreenType.ToString() ?? "<root>";
         Debug.Log(
             $"Screen switched from {switchedFrom} to {newScreen.ScreenType}");
-        
-        OnScreenChangedSelf(newScreen.ScreenType);
+
+        OnScreenChangedSelf(newScreen.ScreenType).Forget();
     }
 
     /// <summary>
     /// Request a screen which will be added to the queue
     /// </summary>
-    public void RequestScreen(ScreenType screenTypeToSwitch,
+    public async UniTask RequestScreen(ScreenType screenTypeToSwitch,
         ScreenType addAfterScreen,
         SwitchMode switchMode = SwitchMode.Replacing)
     {
-        RequestScreenWithData(new EmptyScreenData(screenTypeToSwitch),
+        await RequestScreenWithData(
+            new EmptyScreenData(screenTypeToSwitch),
             addAfterScreen,
             switchMode);
     }
 
     [PublicAPI]
-    public void RequestScreenWithData<T>(T baseScreenData,
+    public async UniTask RequestScreenWithData<T>(T baseScreenData,
         ScreenType addAfterScreen,
         SwitchMode switchMode = SwitchMode.Replacing)
         where T : BaseScreenData
@@ -238,7 +238,7 @@ public class ScreenController
         };
 
         if (_screenQueueDictionary.TryGetValue(addAfterScreen,
-                out var queue))
+            out var queue))
         {
             queue.Enqueue(requestedScreenData);
             Debug.Log($"Screen {screenTypeString} added to queue!");
@@ -251,21 +251,21 @@ public class ScreenController
             _screenQueueDictionary.Add(addAfterScreen, queue);
         }
 
-        CheckRequestedScreens();
+        await CheckRequestedScreens();
     }
 
     /// <summary>
     /// Checking and popping a screen if we have any screens in requested screens of specified type
     /// </summary>
-    private void CheckRequestedScreens()
+    private async UniTask CheckRequestedScreens()
     {
         if (_screenQueueDictionary.TryGetValue(CurrentScreenType,
-                out var queue))
+            out var queue))
         {
             if (queue.Count == 0) return;
 
             var requestedScreenData = queue.Dequeue();
-            SwitchToScreenWithScreenData(requestedScreenData
+            await SwitchToScreenWithScreenData(requestedScreenData
                     .ScreenData,
                 requestedScreenData.SwitchMode);
         }

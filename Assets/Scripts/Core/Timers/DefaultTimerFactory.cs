@@ -9,11 +9,11 @@ public sealed class DefaultTimerFactory : TimerAbstractFactory
 {
     public override ITimer CreateTimer(float duration,
         Action onComplete,
-        Action<float> onUpdate = null,
+        Action<float> onTick = null,
         bool looping = false,
         bool useRealTime = false)
     {
-        return DefaultTimer.CreateTimer(duration, onComplete, onUpdate, looping, useRealTime);
+        return DefaultTimer.CreateTimer(duration, onComplete, onTick, looping, useRealTime);
     }
 }
 

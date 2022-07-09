@@ -9,7 +9,7 @@ public abstract class TimerAbstractFactory
 {
     public abstract ITimer CreateTimer(float duration,
         Action onComplete,
-        Action<float> onUpdate = null,
+        Action<float> onTick = null,
         bool looping = false,
         bool useRealTime = false);
 }

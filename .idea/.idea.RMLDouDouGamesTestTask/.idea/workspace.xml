@@ -20,8 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8e65503-deec-4e37-bca3-07f0951c20bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RMLDouDouGamesTestTask/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RMLDouDouGamesTestTask/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RMLDouDouGamesTestTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RMLDouDouGamesTestTask/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/timer_background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/timer_background.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/IScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/IScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/ScreenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/ScreenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimer/DefaultTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimer/DefaultTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimerFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/ITimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/ITimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/TimerAbstractFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Timers/TimerAbstractFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,25 +45,40 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Timers/ITimer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Framework/Time/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimerFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Core/Events/EventBus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/TimerScreenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.6/Editor/Drawing/Inspector/TabbedView/TabButton.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestTimer2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Controllers/BaseScreenData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/MainScreenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D15178F-DB5D-41BB-A011-8AFFBE3DEAAF/cc/57eed58b/IPointerClickHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Editor/RectTransformAnchorSnapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Controllers/EmptyScreenData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D15178F-DB5D-41BB-A011-8AFFBE3DEAAF/c2/76da590f/ISubmitHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Handlers/MainScreenButtonTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Misc/Saver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Controllers/IScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D15178F-DB5D-41BB-A011-8AFFBE3DEAAF/ab/4777d6af/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/View/View.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Controllers/ScreenController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Handlers/TimerSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/UtilsExtensions/EnumUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Timers/ITimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/IInit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameInitializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Framework/Time/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Handlers/HoldButtonHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Core/Events/EventBus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ViewPresenters/TimerScreenViewPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestTimer2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Editor/RectTransformAnchorSnapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/22A71259-0763-4F27-B504-9762847405C6/be/9725457e/ListView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/View/IPoolingResettable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Controllers/ScreenController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/View/ListPresenter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -63,18 +90,31 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TestTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/Timer/DefaultTimerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/Timer/DefaultTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/ITimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimer/DefaultTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/TimerAbstractFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/BaseScreenData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/View/View.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/EmptyScreenData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/IScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/UtilsExtensions/EnumUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/ScreenController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Editor/RectTransformAnchorSnapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestTimer2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/View/IPoolingResettable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/View/ListView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Misc/Saver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/IInit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Handlers/MainScreenButtonTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Handlers/TimerSaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/TimerAbstractFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Handlers/HoldButtonHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimer/DefaultTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Timers/ITimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/EventBus.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/IScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/MainScreenController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameInitializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/ScreenController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/TimerScreenController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ViewPresenters/TimerScreenViewPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ViewPresenters/MainScreenViewPresenter.cs" />
       </list>
     </option>
   </component>
@@ -84,9 +124,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.425" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.4124031" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -100,10 +142,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28024">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="28024" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -120,6 +162,10 @@
       <updated>1657299245144</updated>
       <workItem from="1657299246289" duration="12302000" />
       <workItem from="1657312564381" duration="2522000" />
+      <workItem from="1657363066673" duration="18168000" />
+      <workItem from="1657384635022" duration="1135000" />
+      <workItem from="1657385796040" duration="137000" />
+      <workItem from="1657385992694" duration="8844000" />
     </task>
     <servers />
   </component>
@@ -144,81 +190,177 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="747" height="464" key="DebuggerActiveHint" timestamp="1657305557691">
+    <state width="747" height="464" key="DebuggerActiveHint" timestamp="1657393786512">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="747" height="464" key="DebuggerActiveHint/0.0.1920.1032@0.0.1920.1032" timestamp="1657305557691" />
-    <state width="1551" height="258" key="GridCell.Tab.0.bottom" timestamp="1657312523675">
+    <state width="747" height="464" key="DebuggerActiveHint/0.0.1920.1032@0.0.1920.1032" timestamp="1657393786512" />
+    <state width="1552" height="302" key="GridCell.Tab.0.bottom" timestamp="1657391303999">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.0.center" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657391303999" />
+    <state width="1552" height="302" key="GridCell.Tab.0.center" timestamp="1657391303999">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.0.left" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657391303999" />
+    <state width="1552" height="302" key="GridCell.Tab.0.left" timestamp="1657391303999">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.0.right" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657391303999" />
+    <state width="1552" height="302" key="GridCell.Tab.0.right" timestamp="1657391303999">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.1.bottom" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657391303999" />
+    <state width="1551" height="241" key="GridCell.Tab.1.bottom" timestamp="1657386710380">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.1.center" timestamp="1657312523675">
+    <state width="1551" height="241" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657386710380" />
+    <state width="1551" height="241" key="GridCell.Tab.1.center" timestamp="1657386710380">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.1.left" timestamp="1657312523675">
+    <state width="1551" height="241" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657386710380" />
+    <state width="1551" height="241" key="GridCell.Tab.1.left" timestamp="1657386710380">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.1.right" timestamp="1657312523675">
+    <state width="1551" height="241" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657386710380" />
+    <state width="1551" height="241" key="GridCell.Tab.1.right" timestamp="1657386710380">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.2.bottom" timestamp="1657312523675">
+    <state width="1551" height="241" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657386710380" />
+    <state width="1552" height="302" key="GridCell.Tab.2.bottom" timestamp="1657391309535">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.2.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.2.center" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.2.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657391309535" />
+    <state width="1552" height="302" key="GridCell.Tab.2.center" timestamp="1657391309535">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.2.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.2.left" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.2.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657391309535" />
+    <state width="1552" height="302" key="GridCell.Tab.2.left" timestamp="1657391309535">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.2.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.2.right" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.2.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657391309535" />
+    <state width="1552" height="302" key="GridCell.Tab.2.right" timestamp="1657391309535">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.2.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.3.bottom" timestamp="1657312523675">
+    <state width="1552" height="302" key="GridCell.Tab.2.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657391309535" />
+    <state width="1551" height="261" key="GridCell.Tab.3.bottom" timestamp="1657385933651">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.3.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.3.center" timestamp="1657312523675">
+    <state width="1551" height="261" key="GridCell.Tab.3.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1657385933651" />
+    <state width="1551" height="261" key="GridCell.Tab.3.center" timestamp="1657385933651">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.3.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.3.left" timestamp="1657312523675">
+    <state width="1551" height="261" key="GridCell.Tab.3.center/0.0.1920.1032@0.0.1920.1032" timestamp="1657385933651" />
+    <state width="1551" height="261" key="GridCell.Tab.3.left" timestamp="1657385933651">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.3.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state width="1551" height="258" key="GridCell.Tab.3.right" timestamp="1657312523675">
+    <state width="1551" height="261" key="GridCell.Tab.3.left/0.0.1920.1032@0.0.1920.1032" timestamp="1657385933651" />
+    <state width="1551" height="261" key="GridCell.Tab.3.right" timestamp="1657385933651">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1551" height="258" key="GridCell.Tab.3.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657312523675" />
-    <state x="649" y="284" key="run.anything.popup" timestamp="1657311205395">
+    <state width="1551" height="261" key="GridCell.Tab.3.right/0.0.1920.1032@0.0.1920.1032" timestamp="1657385933651" />
+    <state x="983" y="285" key="RiderGenerateDialog" timestamp="1657379148378">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="649" y="284" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1657311205395" />
-    <state x="689" y="254" width="672" height="678" key="search.everywhere.popup" timestamp="1657314433821">
+    <state x="983" y="285" key="RiderGenerateDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1657379148378" />
+    <state x="267" y="161" width="1411" height="779" key="VCS.FileHistoryDialog" timestamp="1657378336304">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="689" y="254" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1657314433821" />
+    <state x="267" y="161" width="1411" height="779" key="VCS.FileHistoryDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1657378336304" />
+    <state x="458" y="342" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1657391133524">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="458" y="342" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1032@0.0.1920.1032" timestamp="1657391133524" />
+    <state x="649" y="284" key="run.anything.popup" timestamp="1657388866429">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="649" y="284" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1657388866429" />
+    <state x="462" y="191" width="672" height="678" key="search.everywhere.popup" timestamp="1657393102326">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="462" y="191" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1657393102326" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/TimerScreenController.cs</url>
+          <line>149</line>
+          <properties documentPath="C:\MyStuff\Unity Projects\Self\RMLDouDouGamesTestTask\Assets\Scripts\Game\Controllers\TimerScreenController.cs" initialLine="111">
+            <startOffsets>
+              <option value="5629" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5686" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Core/Timers/DefaultTimer/DefaultTimer.cs</url>
+          <line>108</line>
+          <properties documentPath="C:\MyStuff\Unity Projects\Self\RMLDouDouGamesTestTask\Assets\Scripts\Core\Timers\DefaultTimer\DefaultTimer.cs" initialLine="108">
+            <startOffsets>
+              <option value="2508" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2526" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/MainScreenController.cs</url>
+          <line>73</line>
+          <properties documentPath="C:\MyStuff\Unity Projects\Self\RMLDouDouGamesTestTask\Assets\Scripts\Game\Controllers\MainScreenController.cs" initialLine="72">
+            <startOffsets>
+              <option value="2129" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2153" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/MainScreenController.cs</url>
+          <line>97</line>
+          <properties documentPath="C:\MyStuff\Unity Projects\Self\RMLDouDouGamesTestTask\Assets\Scripts\Game\Controllers\MainScreenController.cs" initialLine="91">
+            <startOffsets>
+              <option value="2840" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2891" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/MainScreenController.cs</url>
+          <line>93</line>
+          <properties documentPath="C:\MyStuff\Unity Projects\Self\RMLDouDouGamesTestTask\Assets\Scripts\Game\Controllers\MainScreenController.cs" initialLine="93">
+            <startOffsets>
+              <option value="2726" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2777" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Controllers/TimerScreenController.cs</url>
+          <line>221</line>
+          <properties documentPath="C:\MyStuff\Unity Projects\Self\RMLDouDouGamesTestTask\Assets\Scripts\Game\Controllers\TimerScreenController.cs" initialLine="216">
+            <startOffsets>
+              <option value="5600" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5657" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

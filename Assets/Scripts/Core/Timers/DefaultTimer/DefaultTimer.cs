@@ -11,7 +11,12 @@ public class DefaultTimer : ITimer
 {
     #region PUBLIC_PROPERTIES_API
 
-    public float Duration { get; private set; }
+    public event  Action OnCompleteCallback;
+    public event  Action<float> OnTickCallback;
+    
+    public float LeftTime => GetLeftTimeFromStart();
+    
+    public float Duration { get; set; }
 
     public bool Looping { get; set; }
 
@@ -33,7 +38,7 @@ public class DefaultTimer : ITimer
 
     public static DefaultTimer CreateTimer(float duration,
         Action onComplete,
-        Action<float> onUpdate = null,
+        Action<float> onTick = null,
         bool looping = false,
         bool useRealTime = false)
     {
@@ -56,7 +61,7 @@ public class DefaultTimer : ITimer
 
         var defaultTimer = new DefaultTimer(duration,
             onComplete,
-            onUpdate,
+            onTick,
             looping,
             useRealTime);
 
@@ -69,7 +74,13 @@ public class DefaultTimer : ITimer
 
     #region PUBLIC_METHODS_API
 
-    public void Start() { IsStarted = true; }
+    public void Start()
+    {
+        IsStarted = true;
+        
+        _startTime = GetTotalTimePassed();
+        _lastUpdateTime = _startTime;
+    }
 
     public void Stop()
     {
@@ -93,6 +104,18 @@ public class DefaultTimer : ITimer
         _timeElapsedBeforePause = null;
     }
 
+    public void Reset()
+    {
+        IsStarted = false;
+        IsCompleted = false;
+        _timeElapsedBeforeCancel = null;
+
+        _startTime = GetTotalTimePassed();
+        _lastUpdateTime = _startTime;
+
+        _timerController.AddTimer(this);
+    }
+
     public float GetPassedTimeFromStart()
     {
         if (IsCompleted || GetTotalTimePassed() >= GetEndTime())
@@ -105,6 +128,11 @@ public class DefaultTimer : ITimer
 
     public float GetLeftTimeFromStart()
     {
+        if (!IsStarted)
+        {
+            return Duration;
+        }
+        
         return Duration - GetPassedTimeFromStart();
     }
 
@@ -114,8 +142,6 @@ public class DefaultTimer : ITimer
 
     #region INTERNAL_PRIVATE
 
-    private readonly Action _onCompleteCallback;
-    private readonly Action<float> _onUpdateCallback;
     private float _startTime;
     private float _lastUpdateTime;
 
@@ -126,19 +152,16 @@ public class DefaultTimer : ITimer
 
     private DefaultTimer(float duration,
         Action onCompleteCallback,
-        Action<float> onUpdateCallback,
+        Action<float> onTickCallback,
         bool looping,
         bool useRealTime)
     {
         Duration = duration;
-        _onCompleteCallback = onCompleteCallback;
-        _onUpdateCallback = onUpdateCallback;
+        OnCompleteCallback = onCompleteCallback;
+        OnTickCallback = onTickCallback;
 
         Looping = looping;
         UseRealTime = useRealTime;
-
-        _startTime = GetTotalTimePassed();
-        _lastUpdateTime = _startTime;
     }
 
 
@@ -153,6 +176,7 @@ public class DefaultTimer : ITimer
     {
         return GetTotalTimePassed() - _lastUpdateTime;
     }
+    
 
     public void Update()
     {
@@ -167,11 +191,11 @@ public class DefaultTimer : ITimer
 
         _lastUpdateTime = GetTotalTimePassed();
 
-        _onUpdateCallback?.Invoke(GetPassedTimeFromStart());
+        OnTickCallback?.Invoke(GetLeftTimeFromStart());
 
         if (GetTotalTimePassed() >= GetEndTime())
         {
-            _onCompleteCallback.Invoke();
+            OnCompleteCallback?.Invoke();
 
             if (Looping)
             {

@@ -176,7 +176,7 @@ public class ListPresenter<TData, TView> : ListPresenterBase<TView>
 
     private Dictionary<TData, TView> _views;
 
-    public void Push(TData data, Action<TData, TView> onCreated)
+    public void Add(TData data, Action<TData, TView> onCreated)
     {
         var view = GetObject();
 
@@ -200,7 +200,7 @@ public class ListPresenter<TData, TView> : ListPresenterBase<TView>
     {
         foreach (var item in data)
         {
-            Push(item, onCreated);
+            Add(item, onCreated);
         }
     }
 

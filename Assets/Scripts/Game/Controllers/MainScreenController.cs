@@ -7,13 +7,13 @@ using UnityEngine;
 
 namespace RML.Game
 {
-
 public class MainScreenController : IScreen, IInit
 {
-    // TODO: MOVE TO DATA CONFIG
+    // -----------FETCH FROM DATA-------------------
     private readonly int _defaultCount = 3;
     private readonly float _defaultDuration = 5;
     private readonly int _minCount = 3;
+
     private readonly int _maxCount = 5;
     // ---------------------------------------------
 
@@ -27,10 +27,11 @@ public class MainScreenController : IScreen, IInit
     private List<MainScreenButtonTimerViewModel>
         _mainScreenButtonTimerViewModels;
 
-  
-
-    public MainScreenController(MainScreenViewPresenter mainScreenViewPresenter, TimerSaver timerSaver,
-        ScreenController screenController, EventBus eventBus)
+    public MainScreenController(
+        MainScreenViewPresenter mainScreenViewPresenter,
+        TimerSaver timerSaver,
+        ScreenController screenController,
+        EventBus eventBus)
     {
         _mainScreenViewPresenter = mainScreenViewPresenter;
         _timerSaver = timerSaver;
@@ -39,7 +40,7 @@ public class MainScreenController : IScreen, IInit
         _mainScreenButtonTimerViewModels =
             new List<MainScreenButtonTimerViewModel>();
     }
-    
+
     public ScreenType ScreenType => ScreenType.MainScreen;
 
     public void RegisterScreen()
@@ -54,9 +55,11 @@ public class MainScreenController : IScreen, IInit
 
     public void Init()
     {
-        _eventBus.AddListener(Events.TimerCompletedEvent, HandleTimerCompleted);
-        
-        _mainScreenViewPresenter.Init(HandleAddTimerClick, HandleRemoveTimerClick );
+        _eventBus.AddListener(Events.TimerCompletedEvent,
+            HandleTimerCompleted);
+
+        _mainScreenViewPresenter.Init(HandleAddTimerClick,
+            HandleRemoveTimerClick);
         _mainScreenViewPresenter.Hide();
         RegisterScreen();
     }
@@ -70,21 +73,20 @@ public class MainScreenController : IScreen, IInit
     private void HandleRemoveTimerClick()
     {
         var count = _mainScreenButtonTimerViewModels.Count;
-        
+
         if (CanBeRemoved(count))
         {
             var lastIndex = _mainScreenButtonTimerViewModels.Count - 1;
             _mainScreenButtonTimerViewModels.RemoveAt(lastIndex);
-            
+
             _timersSaveData.TimerSaveData.Remove(lastIndex);
-            
+
             _timerSaver.Save(_timersSaveData);
 
-            _eventBus.PublishEvent(
-                new TimerButtonDeletedPayload(
-                    Events.TimerButtonDeletedEvent,
-                    lastIndex));
-            
+            _eventBus.PublishEvent(new TimerButtonDeletedPayload(
+                Events.TimerButtonDeletedEvent,
+                lastIndex));
+
             RaiseModelStateChanged();
         }
     }
@@ -92,25 +94,24 @@ public class MainScreenController : IScreen, IInit
     private void HandleAddTimerClick()
     {
         var count = _mainScreenButtonTimerViewModels.Count;
-        
+
         if (CanBeAdded(count))
         {
             var newId = _mainScreenButtonTimerViewModels.Count;
-            
-            _mainScreenButtonTimerViewModels.Add(new MainScreenButtonTimerViewModel
-            {
-                Id = newId,
-                Text = $"Button {newId + 1}",
-                ClickCallback = ButtonClickCallback
-            });
-            
-            _timersSaveData.TimerSaveData.Add(newId, new TimerSaveData
-            {
-                LeftTime = _defaultDuration
-            });
-            
+
+            _mainScreenButtonTimerViewModels.Add(
+                new MainScreenButtonTimerViewModel
+                {
+                    Id = newId,
+                    Text = $"Button {newId + 1}",
+                    ClickCallback = ButtonClickCallback
+                });
+
+            _timersSaveData.TimerSaveData.Add(newId,
+                new TimerSaveData {LeftTime = _defaultDuration});
+
             _timerSaver.Save(_timersSaveData);
-            
+
             RaiseModelStateChanged();
         }
     }
@@ -119,7 +120,7 @@ public class MainScreenController : IScreen, IInit
     {
         return currentCount > _minCount;
     }
-    
+
     private bool CanBeAdded(int currentCount)
     {
         return currentCount < _maxCount;
@@ -128,9 +129,9 @@ public class MainScreenController : IScreen, IInit
     public UniTask OnShow<T>(T baseScreenData) where T : BaseScreenData
     {
         LoadData();
-
-        RaiseModelStateChanged();
+        
         _mainScreenViewPresenter.Show();
+        RaiseModelStateChanged();
         return UniTask.CompletedTask;
     }
 
@@ -143,17 +144,20 @@ public class MainScreenController : IScreen, IInit
                     Id = x.Key,
                     Text = $"Button {x.Key + 1}",
                     ClickCallback = ButtonClickCallback
-                }).ToList();
-        
-        _mainScreenViewPresenter.Repaint(_mainScreenButtonTimerViewModels);
+                })
+                .ToList();
+
+        _mainScreenViewPresenter.Repaint(
+            _mainScreenButtonTimerViewModels);
     }
 
     private void ButtonClickCallback(int timerId)
     {
         // Switch to timer screen controoller
-        
-        _screenController.SwitchToScreenWithScreenData(
-            new TimerScreenData(timerId)).Forget();
+
+        _screenController
+            .SwitchToScreenWithScreenData(new TimerScreenData(timerId))
+            .Forget();
     }
 
     public UniTask OnHide()
@@ -176,8 +180,9 @@ public class MainScreenController : IScreen, IInit
             _timerSaver.Save(_timersSaveData);
         }
     }
-    
-    private Dictionary<int, TimerSaveData> CreateTimersData(int count, float duration)
+
+    private Dictionary<int, TimerSaveData> CreateTimersData(int count,
+        float duration)
     {
         var l = Enumerable
             .Range(0, count)
@@ -188,4 +193,3 @@ public class MainScreenController : IScreen, IInit
     }
 }
 }
-

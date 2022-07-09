@@ -23,11 +23,19 @@ public class MainScreenButtonTimer : MonoBehaviour, IPoolingResettable
 
    [SerializeField]
    private TMP_Text _buttonText;
+
+   [SerializeField]
+   private RectTransform _root;
+
+   [SerializeField]
+   private OutOfScreenAnimationHandler _outOfScreenAnimationHandler;
    
    public int Id { get; private set; }
 
    private Action<int> _clickCallback;
 
+   public RectTransform GetRoot() => _root;
+   
    public void ResetState()
    {
       Id = 0;
@@ -36,13 +44,16 @@ public class MainScreenButtonTimer : MonoBehaviour, IPoolingResettable
       _button.onClick.RemoveListener(ClickCallback);
    }
    
-   public void Repaint(MainScreenButtonTimerViewModel data)
+   public void Repaint(MainScreenButtonTimerViewModel data, float animationSpeedMultiplier)
    {
       Id = data.Id;
       _buttonText.text = data.Text;
       _clickCallback = data.ClickCallback;
       
       _button.onClick.AddListener(ClickCallback);
+      
+      _outOfScreenAnimationHandler.StopAnimate();
+      _outOfScreenAnimationHandler.StartAnimate(animationSpeedMultiplier);
    }
 
    private void ClickCallback()

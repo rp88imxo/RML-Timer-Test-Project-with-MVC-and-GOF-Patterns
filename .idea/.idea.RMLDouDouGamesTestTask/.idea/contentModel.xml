@@ -356,6 +356,7 @@
             <e p="Handlers" t="Include">
               <e p="HoldButtonHandler.cs" t="Include" />
               <e p="MainScreenButtonTimer.cs" t="Include" />
+              <e p="OutOfScreenAnimationHandler.cs" t="Include" />
               <e p="TimerSaver.cs" t="Include" />
             </e>
             <e p="ViewPresenters" t="Include">

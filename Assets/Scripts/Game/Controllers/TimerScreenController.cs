@@ -163,7 +163,7 @@ public class TimerScreenController : IScreen, IInit
     private void StartTimerCallback()
     {
         var timer = GetOrCreateTimer();
-
+        
         timer.Start();
 
         if (_currentViewTimer.IsDone)
@@ -171,6 +171,7 @@ public class TimerScreenController : IScreen, IInit
             _currentViewTimer.Reset();
         }
 
+        _currentViewTimer.Duration = _currentTimerDuration;
         _currentViewTimer.Start();
 
         _screenController.BackToPreviousScreen().Forget();
@@ -205,7 +206,7 @@ public class TimerScreenController : IScreen, IInit
         {
             return;
         }
-        
+
         var data = _cachedTimerSavedData.TimerSaveData;
 
         foreach (var (key, value) in _timers)
@@ -309,7 +310,7 @@ public class TimerScreenController : IScreen, IInit
         _eventBus.PublishEvent(new TimerCompletedPayload(
             Events.TimerCompletedEvent,
             timerId));
-
+        
         _timers.Remove(timerId);
     }
 

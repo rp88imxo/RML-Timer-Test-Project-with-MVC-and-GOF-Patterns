@@ -72,7 +72,9 @@ public class MainScreenViewPresenter : View
    private void OnButtonCreated(MainScreenButtonTimerViewModel viewModel,
       MainScreenButtonTimer buttonTimer)
    {
-      buttonTimer.Repaint(viewModel);
+      var total = _buttonsPanelPresenter.Views.Count;
+      var speedMultiplier = 1.0f / ((total + 1.0f) * 0.9f);
+      buttonTimer.Repaint(viewModel, speedMultiplier);
    }
 }
 
